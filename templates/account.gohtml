@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>PhotoGrid - Login</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        .error {color: red}
+        .msg {color: green}
+    </style>
+</head>
+<body>
+    {{if .Emsg}}
+        <span class="error">{{.Emsg}}</span>
+        <br><br>
+    {{end}}
+    {{if .Msg}}
+        <span class="msg">{{.Msg}}</span>
+        <br><br>
+    {{end}}
+
+    {{if .IsAdminIP}}
+    <h1>Create account</h1>
+    <form action="/account/create" method="post">
+        <input type="text" name="email" placeholder="Email">
+        <br>
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <input type="password" name="password2" placeholder="Password again">
+        <br>
+        <input type="submit" value="Create account">
+    </form>
+    {{end}}
+    <h1>Login</h1>
+    <form action="/account/login" method="post">
+        <input type="text" name="email" placeholder="Email">
+        <br>
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

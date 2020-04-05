@@ -1,0 +1,10 @@
+{
+  "adminIps": ["127.0.0.1"],
+  "db": {
+    "dbhost": "127.0.0.1",
+    "dbport": "3306",
+    "dbuser": "user",
+    "dbpass": "pass",
+    "dbname": "dbname"
+  }
+}
